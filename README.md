@@ -10,7 +10,7 @@ chown -R zimbra. /opt/pyAntispam
 O arquivo /tmp/amavis_novalistadeverificacao será lido pelo script criando varias listas e as comparando com os dados atuais do Zimbra. Os novos dominio/ips encontrados serão adicionados ao amavis(dominio) e ao postfix no arquivo /opt/zimbra/conf/postfix_blacklist.
 ### /tmp/amavis_novalistadeverificacao
 * O arquivo podera ser enviado ao servidor de 'N' maneiras, eu particularmente gosto de utilizar a ferramenta [Rundeck](https://www.rundeck.com/open-source) *(Ele te permite auditar as execuções, quem executa, quem tem acesso ao JOB, API entre outra features)* onde é criando um JOB e o mesmo solicita um arquivo para ser executado, o JOB é configurado para modificar o nome do arquivo que lhe for dado para amavis_novalistadeverificacao e deixo-lo no /tmp apos isto executa o script.
-* O arquvo pode conter apenas o domínio assim como usuário@domínio o script ira remover o usuário e adicionar a lista apenas o domínio.
+* O arquvo pode deverar conter apenas o domínio(sem ip) assim como usuário@domínio assim o script ira remover o usuário e adicionar a lista apenas o domínio.
 ### Amavis
 * É criada uma lista com todas as entradas atuais do amavis(zmprov gd meudominio.com.br amavisBlacklistSenders).
 * Esta lista sera comparada com a lista gerada a partir do arquivo /tmp/amavis_novalistadeverificacao gerando uma nova lista com os dominio que serão adicionados ao amavis.
