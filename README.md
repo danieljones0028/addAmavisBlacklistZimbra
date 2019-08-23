@@ -1,1 +1,1 @@
-# Add Blacklist from postfix and amavis
+# Add Blacklist(postfix and amavis)
