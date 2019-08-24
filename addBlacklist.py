@@ -7,7 +7,7 @@ import socket
 import logging
 import dns.resolver #pip install dnspython
 
-dominio = input(str('Digite o nome do seu dominio, entre aspas: '))
+dominio = raw_input(str('Digite o nome do seu dominio: '))
 
 # Path's
 amavis_novalistadeverificacao = '/tmp/amavis_novalistadeverificacao'
